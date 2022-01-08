@@ -32,4 +32,14 @@ export class AppComponent {
     })
   }
 
+  getUserLogged() {
+    this.authService.getUserLoggedState().subscribe(res => {
+      console.log(res?.email);
+    })
+  }
+
+  logout() {
+    this.authService.logout();
+  }
+
 }
