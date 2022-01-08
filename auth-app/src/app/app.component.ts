@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'auth-app';
+  
+  user = {
+    email: '',
+    password: ''
+  }
+  Submit() {
+    console.log(this.user)
+  }
+
 }
