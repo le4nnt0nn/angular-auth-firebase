@@ -3,9 +3,10 @@
       <img src="https://img.icons8.com/color/480/firebase.png" width="30" height="30" class="d-inline-block align-top" alt="">
       Firebase Login
     </a>
-    <a class="navbar-brand" href="#">
-        <img src="https://avatars.githubusercontent.com/u/71550295?v=4" width="30" height="30" class="d-inline-block align-top" alt="">
-        Bootstrap
+
+    <a class="navbar-brand" href="#" *ngIf="userLogged | async as user">
+        <img style="border-radius: 100%;" *ngIf="user.photoURL" src="{{user.photoURL}}" width="30" height="30" class="d-inline-block align-top" alt="">
+        {{user.email}}
       </a>
 </nav>
 
