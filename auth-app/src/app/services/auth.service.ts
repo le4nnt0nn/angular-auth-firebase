@@ -36,7 +36,7 @@ export class AuthService {
     }
   }
 
-  getUserLogged() {
+  getUserLoggedState() {
     return this.afauth.authState;
   }
 
