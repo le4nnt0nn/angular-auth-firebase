@@ -6,6 +6,7 @@ import firebase from 'firebase/compat/app';
   providedIn: 'root'
 })
 export class AuthService {
+  [x: string]: any;
 
   constructor(private afauth: AngularFireAuth) { }
 
@@ -36,10 +37,12 @@ export class AuthService {
     }
   }
 
+  // Check logged state for user
   getUserLoggedState() {
     return this.afauth.authState;
   }
 
+  // logout to afauth
   logout() {
     this.afauth.signOut();
   }
